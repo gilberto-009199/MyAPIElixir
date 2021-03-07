@@ -8,6 +8,9 @@ defmodule MyAPIElixirWeb.Router do
   scope "/api", MyAPIElixirWeb do
     pipe_through :api
     get "/:filename",WelcomeController, :index
+
+    post "/users", UsersController, :create
+
   end
 
   # Enables LiveDashboard only for development

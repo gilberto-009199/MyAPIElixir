@@ -18,6 +18,12 @@ config :myAPIElixir, MyAPIElixirWeb.Endpoint,
   pubsub_server: MyAPIElixir.PubSub,
   live_view: [signing_salt: "5RWfF58f"]
 
+
+config :myAPIElixir, MyAPIElixir.Repo,
+  # config par auuid as priamry keys e as chaves estrangeiras
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

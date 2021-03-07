@@ -22,9 +22,13 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
  $ sudo apt-get install esl-erlang
  $ sudo apt-get install elixir
  $ mix archive.install hex phx_new 1.5.7
- $ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
  $ sudo docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+ $ sudo docker run  postgres -e POSTGRES_PASSWORD=password2323
  $ mix archive.install hex phx_new 1.5.7
+ $ mix deps.get
+ $ mix ecto.create
+ $ mix ecto.migrate
+ $ mix phx.server
 ```
   
 
